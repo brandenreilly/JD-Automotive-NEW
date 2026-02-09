@@ -11,7 +11,9 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">JD Automotive</a>
-            <button className="navbar-toggler" type="button" onClick={() => setIsMenuOpen(!isMenuOpen)}></button>
+            <button className="navbar-toggler" type="button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <span className="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
   );
