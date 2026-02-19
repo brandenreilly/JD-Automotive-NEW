@@ -1,11 +1,52 @@
 import React from "react";
 
-import oilChange from "../../img/oil-change.png"; 
+import oilChange from "../../img/oil-change.jpg";
+import tuneUp from "../../img/tune-up.jpg"
+import brakes from "../../img/brakes.jpg"
+import acDiag from "../../img/ac-diag.jpg"
+
 
 import "../../styles/main.css";
+import Cards from "./Cards";
+import Description from "./Description";
 
-//create your first component
+//Work on mapping through the cards list for the card component.
 const Home = () => {
+	var cardsList = [
+		{
+			title: "Oil Change",
+			img : oilChange
+		},
+		{
+			title: "Tune-Ups",
+			img : tuneUp
+		},
+		{
+			title: "Brakes",
+			img : brakes
+		},
+		{
+			title: "A/C & Diagnostics",
+			img : acDiag
+		},
+		{
+			title: "Auto Detailing",
+			img: "N/A"
+		},
+		{
+			title: "Free Inspection",
+			img: "N/A"
+		},
+		{
+			title: "Engine Repair",
+			img: "N/A"
+		},
+		{
+			title: "Suspension & Alignment",
+			img: "N/A"
+		}
+	]
+
 	return (
 		<div className="container text-center mt-5">
 			<div className="row">
@@ -14,40 +55,12 @@ const Home = () => {
 					<p className="lead">Your trusted partner in automotive excellence.</p>
 				</div>
 			</div>
-			<div className="row mt-2 d-flex justify-content-center mx-auto">
-				<div className="col-md-3 col-6 mt-2">
-					<div className="card autoServices" style={{width: "10rem"}}>
-						<img src={oilChange} className="card-img-top" alt="Service 1"/>
-						<div className="card-body">
-							<p>Oil Changes</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-md-3 col-6 mt-2">
-					<div className="card autoServices" style={{width: '10rem'}}>
-						<img src={oilChange} className="card-img-top" alt="Service 2"/>
-						<div className="card-body">
-							<p>Brakes</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-md-3 col-6 mt-2">
-					<div className="card autoServices" style={{width: '10rem'}}>
-						<img src={oilChange} className="card-img-top" alt="Service 3"/>
-						<div className="card-body">
-							<p>Tune-Ups</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-md-3 col-6 mt-2">
-					<div className="card autoServices" style={{width: '10rem'}}>
-						<img src={oilChange} className="card-img-top" alt="Service 4"/>
-						<div className="card-body">
-							<p>A/C</p>
-						</div>
-					</div>
-				</div>
+			<div className="row text-center mt-2 mx-auto p-0">
+				{cardsList.map((card, ind)=>{
+					return (<Cards props={card} key={ind}/>) 
+				})}
 			</div>
+			<Description />
 		</div>
 	);
 };
