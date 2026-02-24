@@ -16,3 +16,7 @@ body {
 .cardContainer {
     justify-items: center;
 }
+
+.descriptionSection {
+    background-color: #5c0404;
+}
