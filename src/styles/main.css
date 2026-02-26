@@ -1,5 +1,6 @@
 body {
-    background-color: black;
+    /* background-color: black; */
+    background-image: linear-gradient(to bottom, black 20%, #6e0505);
     color: white;
 }
 
@@ -17,6 +18,10 @@ body {
     justify-items: center;
 }
 
-.descriptionSection {
+/* .descriptionSection {
     background-color: #5c0404;
 }
+
+.locationSection {
+    background-color: #5c0404
+} */

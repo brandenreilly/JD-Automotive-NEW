@@ -4,11 +4,15 @@ import oilChange from "../../img/oil-change.jpg";
 import tuneUp from "../../img/tune-up.jpg"
 import brakes from "../../img/brakes.jpg"
 import acDiag from "../../img/ac-diag.jpg"
-
+import autoDetail from "../../img/detailing.jpg"
+import inspection from "../../img/inspection.jpg"
+import engineRepair from "../../img/engine-repair.jpg"
+import suspension from "../../img/suspension.jpg"
 
 import "../../styles/main.css";
 import Cards from "./Cards";
 import Description from "./Description";
+import Location from "./Location";
 
 //Work on mapping through the cards list for the card component.
 const Home = () => {
@@ -31,24 +35,24 @@ const Home = () => {
 		},
 		{
 			title: "Auto Detailing",
-			img: "N/A"
+			img: autoDetail
 		},
 		{
 			title: "Free Inspection",
-			img: "N/A"
+			img: inspection
 		},
 		{
 			title: "Engine Repair",
-			img: "N/A"
+			img: engineRepair
 		},
 		{
 			title: "Suspension & Alignment",
-			img: "N/A"
+			img: suspension
 		}
 	]
 
 	return (
-		<div className="container text-center mt-5">
+		<div className="container-fluid text-center mt-5">
 			<div className="row">
 				<div className="col-12">
 					<h1 className="display-4">Welcome to JD Automotive</h1>
@@ -61,6 +65,8 @@ const Home = () => {
 				})}
 			</div>
 			<Description />
+			<Location />
+			
 		</div>
 	);
 };
