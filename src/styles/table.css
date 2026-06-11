@@ -1,0 +1,34 @@
+/* table, th, td {
+    border-collapse: collapse;
+    border: 1px solid;
+} */
+
+.hoursTable {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: 8b0000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hoursTable td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hoursTable tr:last-child td {
+    border-bottom: none;
+}
+
+.tableHeader {
+    background: 8b0000;
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableHeader th {
+    padding: 16px;
+}

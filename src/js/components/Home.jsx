@@ -52,7 +52,7 @@ const Home = () => {
 	]
 
 	return (
-		<div className="container-fluid text-center mt-5">
+		<div className="container-fluid text-center" style={{marginTop: '125px'}}>
 			<div className="row">
 				<div className="col-12">
 					<h1 className="display-4">Welcome to JD Automotive</h1>
